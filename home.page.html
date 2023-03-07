@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      AC 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-radio-group value="sex">
+      <ion-item>
+        <ion-label>Homem</ion-label>
+        <ion-radio slot="end" value="homem"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mulher</ion-label>
+        <ion-radio slot="end" value="mulher"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Altura</ion-label>
+    <ion-input [(ngModel)]="alt"></ion-input>
+  </ion-item><br>
+
+  <ion-button expand="block" (click)="calcular()">calcular</ion-button>
+
+  <ion-label>{{res}}</ion-label>
+<ion-list>
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-list-header>Escolha uma opção: </ion-list-header>
+    <ion-item>
+      <ion-label>Opção 1</ion-label>
+      <ion-radio value="option1"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Opção 2</ion-label>
+      <ion-radio value="option2"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Opção 3</ion-label>
+      <ion-radio value="option3"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
+<ion-button (click)="verificarRadio()">Verificar seleção</ion-button>
+</ion-content>
+
